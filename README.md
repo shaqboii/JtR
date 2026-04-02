@@ -19,7 +19,9 @@ Once you have obtained the wordlist, let's get cracking! Run ```john --wordlist=
 
 <img width="742" height="217" alt="image" src="https://github.com/user-attachments/assets/0ed7a452-5ae2-48c8-8b7d-b61f6210e841" />
 
-Nice! John took less than a second to crack the password, but that's because we had a very reliable wordlist, paired with a hash that was created with an old, weaker algorithm. However, the virtue remains the same. If you have many passwords on the hash.txt file, you can check to see which ones John cracked by running ```john --show hash.txt```. This will list the cracked passwords.
+Nice! John took less than a second to crack the password, but that's because we had a very reliable wordlist, paired with a hash that was created with an old, weaker algorithm. However, the virtue remains the same. The way that John managed to crack the password wasn't through guessing; it created hashes of each password in the wordlist combined with the MD5 algorithm plus the aforementioned salt. After running each password listed in the list with this, it finally found its match at password123.
+
+If you have many passwords on the hash.txt file, you can check to see which ones John cracked by running ```john --show hash.txt```. This will list the cracked passwords.
 
 <img width="283" height="86" alt="image" src="https://github.com/user-attachments/assets/96f18c8e-49c3-4a1b-be83-665d5352c707" />
 
